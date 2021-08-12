@@ -1,0 +1,127 @@
+/* ヘッダー部分 */
+
+header{
+    /* rgb=red, green, blueの混ざった色 */
+    background-color: rgb(6,36,66);
+    /* ヘッダー内の余白 */
+    padding: 14px 40px;
+    /* 左と右に分ける */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    /* 高さ */
+    height: 36px;
+}
+
+.nav{
+    /* ulタグはブロック要素だから縦に並ぶ→横にしたい */
+    display: flex;
+}
+
+/* 指定しているaの場所を示すために>をつけている（直下） */
+/* 矢印みたいなもので、>で順番を指定することでピンポイントでそこに反映されるようにこういう書き方をしている */
+.nav > li > a{
+    color: white;
+    font-size: 20px;
+    /* 余白を作る */
+    margin-left: 20px;
+    /* 下線を消すとき */
+    text-decoration: none;
+}
+/* >をつけないと、直下ではない他のタグを指定してしまう */
+/* .nav li a{
+navの中のliの中のaタグと言う意味にはなるが、divの方にも当てはまってしまう。
+なぜならnavの中のliの中のaタグという意味ではどちらにも当てはまっているから。
+} */
+
+/* メイン部分 */
+.welcome{
+    /* 背景に画像を挿入する際のプロパティ */
+    /* 今いるのはstyle.cssだから、フォルダーを遡らないといけない。一回上がらないと行けない。../で戻ることができて自動変換も出てくるようになる */
+    background-image: url(../img/background.jpg);
+    /* 画像サイズ */
+    /* coverはその画像をサイズ通りにピッタリあてはめるもの */
+    background-size: cover;
+    /* 画像のサイズが小さいと何回もリピートされて表示されてしまうのが普通だから、no-repeatをつける */
+    background-repeat: no-repeat;
+    /* vh= view height ウィンドウの画面に合わせて縮小大される */
+    /* 画像の100という数字の分のサイズだけ常に表示される */
+    height: 100vh;
+
+    /* welcometo~とBeathlete等の分すべてに共通した装飾を加えたい */
+    /* welcome内の文字を変える */
+    color: white;
+    /* 文字を太くする */
+    font-weight: bold;
+    /* 配置を指定するときはdisplay.flexを必ず入れる */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.title{
+    /* 文字を真ん中に持ってくる */
+    text-align: center;
+    font-size: 80px;
+    /* Welcome toの文字との間隔 */
+    /* margin: 20px; */
+}
+
+.guideline{
+    text-align: center;
+    font-size: 40px;
+}
+.guideline > li{
+    /* 3つの文字通しの間隔 */
+    margin: 20px;
+}
+
+#programming > h2,
+#english > h2{
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    color: gray;
+    padding-top: 40px;
+}
+
+.contents{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-top: 20px; */
+    margin: 20px auto;
+    font-size: 20px;
+    color: black;
+    /* 文字を左に寄せる */
+    text-align: left;
+    /* 縦方向の位置を揃える */
+    vertical-align: baseline;
+}
+
+.contents_scoreimage{
+    height: 150px;
+    margin: 0 20px;
+}
+
+.discription{
+    width: 50%;
+}
+
+/* フッター部分 */
+
+footer{
+    background-color: rgb(6,36,66);
+    font-size: 130%;
+    display: flex;
+    padding: 20px 0;
+    margin-top: 100px;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}

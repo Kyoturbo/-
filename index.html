@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- CSSにも順番に書く必要がある。  ↓ assetsの中のcssの中のreset.css -->
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <!-- ヘッダー部分 -->
+    <header>
+        <div class="header-left">
+            <!-- 左の部分に画像を挿入 -->
+            <img class="logo" src="./assets/img/logo-white.png" alt="logo">
+        </div>
+        <div class="header-right">
+            <!-- リスト形式にして横並びにする -->
+            <!-- ul>li*2 -->
+            <ul class="nav">
+                <!-- li*2>a -->
+                <!-- リンクにするためにaタグ使用・リンクを入れてID指定して飛ぶようにしたいので#をつけておく　-->
+                <li><a href="#programming">Programming</a></li>
+                <li><a href="#english">English</a></li>
+
+                <!-- これだと.nav li aにもあてはまる -->
+                <!-- <div>
+                    <li><a href=""></a>
+                    </li>
+                </div> -->
+            </ul>
+        </div>
+    </header>
+
+    <!-- メイン部分 -->
+    <main>
+        <!-- section1 -->
+        <section class="welcome">
+            <!-- ここまで書いたら画像の調整に入る -->
+            <h1 class="title">Welcome to NexSeed</h1>
+            <!-- リストタグは必ずulかolで挟むようにする -->
+            <ul class="guideline">
+                <Li>Be Athlete</Li>
+                <Li>Go World</Li>
+                <Li>Enjoy Everything</Li>
+            </ul>
+        </section>
+
+        <!-- section2 -->
+        <section id="programming">
+            <h2>Programming</h2>
+            <!-- display:flexは当てたい部分の親要素に当てるので、contentsというクラスのdivタグを当ててそのなかの子要素にflexが反映されるようにします -->
+            <div class="contents">
+                <p class="discription">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe, consectetur impedit tempora sed numquam, quis qui dolores esse iusto sit rem quae placeat mollitia dolorum aut ab itaque facilis obcaecati!</p>
+                <img class="contents_scoreimage" src="./assets/img/programming.jpg">
+            </div>
+        </section>
+
+        <!-- section3 -->
+        <section id="english">
+            <h2>English</h2>
+            <!-- display:flexは当てたい部分の親要素に当てるので、contentsというクラスのdivタグを当ててそのなかの子要素にflexが反映されるようにします -->
+            <div class="contents">
+                <img class="contents_scoreimage" src="./assets/img/programming.jpg">
+                <p class="discription">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe, consectetur impedit tempora sed numquam, quis qui dolores esse iusto sit rem quae placeat mollitia dolorum aut ab itaque facilis obcaecati!</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- フッター部分 -->
+    <footer>
+        <div>Copyright © SeedKun Inc.
+        </div>
+    </footer>
+</body>
+</html>
